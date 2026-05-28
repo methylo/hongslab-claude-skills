@@ -48,7 +48,7 @@ MIT License. 자유롭게 사용·수정·재배포 가능합니다.
 ## 문의
 
 - 블로그: https://sshong.com
-- 카카오톡 오픈채팅: AI 책쓰기 커뮤니티
+- 카카오톡 오픈채팅 (AI 책쓰기 커뮤니티): https://open.kakao.com/o/ghqbvP0h
 
 ## 변경 이력
 
