@@ -33,7 +33,7 @@
 
 | 스킬명 | 용도 |
 |--------|------|
-| `write-content` | 단편 콘텐츠 작성 (칼럼·뉴스레터·보고서 등) |
+| `write-content` | 단편 콘텐츠 작성 (칼럼·문서형·뉴스레터·보고서 등). 기본 산출물은 페이스북·카카오톡 평문 |
 | `voice-note-writing` | 음성 전사문·긴 구어체 메모를 칼럼 한 편으로 완성 |
 
 ### 문체 기준
@@ -42,7 +42,15 @@
 |--------|------|
 | `hong-voice-reference` | 문체 정본 참조 라이브러리. 다른 스킬이 호출해서 쓴다 |
 
-`hong-voice-reference`는 사용자가 직접 호출하는 스킬이 아닙니다. `voice-note-writing`이 원고를 쓰는 동안 문체 기준을 읽어오는 참조 라이브러리입니다. **두 폴더를 함께 올려야 정상 동작합니다.** `hong-voice-reference` 없이 `voice-note-writing`만 올리면 축약된 폴백 기준으로만 작동합니다.
+`hong-voice-reference`는 사용자가 직접 호출하는 스킬이 아닙니다. 다른 스킬이 원고를 쓰는 동안 문체 기준을 읽어오는 참조 라이브러리입니다.
+
+**아래 스킬은 `hong-voice-reference` 폴더를 함께 올려야 정상 동작합니다.**
+
+- `write-content`
+- `voice-note-writing`
+- `edit-writing-room`
+
+없이 올리면 각 스킬에 내장된 축약 폴백 기준으로만 작동합니다. 금지어 목록과 AI 흔적 판정 기준은 이 스킬이 단독으로 갖고 있습니다.
 
 ### 편집·퇴고
 
@@ -80,5 +88,6 @@ MIT License. 자유롭게 사용·수정·재배포 가능합니다.
 
 ## 변경 이력
 
+- 2026-09-23: `write-content` 갱신 — 내장 문체 사본(`hongstyle.md`)을 제거하고 `hong-voice-reference` 호출로 전환. 발행 포맷(페북·카톡 평문)과 출력 규칙 추가
 - 2026-09-23: `voice-note-writing` v3.5.1, `hong-voice-reference` v1.6.0 배포
 - 2026-05-28: 저장소 생성, write-content 스킬 초기 배포
